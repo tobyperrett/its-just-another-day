@@ -21,8 +21,10 @@ body {
   background-color: #fff;
   padding: 40px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
 }
 
+/* Header Styling */
 header {
   text-align: center;
   padding-bottom: 20px;
@@ -36,14 +38,25 @@ h1 {
   font-weight: bold;
 }
 
-h3 {
+.authors h3 {
   font-size: 1.2em;
   font-weight: normal;
   color: #555;
+  margin-bottom: 10px;
 }
 
-p {
-  margin-bottom: 1.2em;
+.authors a {
+  color: #333;
+  text-decoration: none;
+}
+
+.authors a:hover {
+  text-decoration: underline;
+}
+
+.conference-info p {
+  font-size: 0.9em;
+  margin-bottom: 5px;
 }
 
 /* Section Headings */
@@ -56,6 +69,8 @@ h2 {
 
 section {
   margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 #introduction p, #benchmark p {
