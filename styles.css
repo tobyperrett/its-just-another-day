@@ -102,22 +102,20 @@ section {
 }
 
 .figure-part {
-  flex: 1; /* Allow the part to grow */
+  flex-grow: 1;
   margin-right: 10px;
-  display: flex; /* Use flex to center the image */
-  flex-direction: column; /* Stack image and caption */
 }
 
 .figure-part:last-child {
-  margin-right: 0; /* Remove right margin on the last child */
+  margin-right: 0;
 }
 
 /* Fixing the image sizing */
 .figure-part img {
-  max-height: 250px; /* Fixed height */
+  height: 250px; /* Fixed height */
   width: auto; /* Adjust the width proportionally */
   display: block;
-  margin: 0 auto; /* Center the image */
+  margin: 0 auto;
   border: 1px solid #ddd;
   padding: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
