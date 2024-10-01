@@ -71,7 +71,6 @@ section {
 
 /* Figure Section */
 #figure img {
-  width: 100%;
   display: block;
   margin: 10px auto;
   border: 1px solid #ddd;
@@ -90,9 +89,10 @@ section {
 /* Part (a) - Full width image */
 .figure-part-a .full-width-image {
   max-width: 100%;
+  height: auto;
 }
 
-/* Parts (b), (c), (d) - Inline images */
+/* Parts (b), (c), and (d) - Images with the same height but varying width */
 .figure-row {
   display: flex;
   justify-content: space-between;
@@ -100,20 +100,19 @@ section {
 }
 
 .figure-part {
-  flex: 1; /* Each part will take up equal space */
+  flex-grow: 1;
   margin-right: 10px;
-  position: relative;
 }
 
 .figure-part:last-child {
   margin-right: 0;
 }
 
-/* To ensure all parts (b), (c), and (d) are the same height */
+/* Each image in the row has the same height, but varying width */
 .figure-part img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image maintains aspect ratio while covering the container */
+  max-height: 250px; /* Set a fixed height for all images */
+  width: auto; /* Width adjusts according to the image's aspect ratio */
+  height: auto; /* Ensures the image scales proportionally */
   border: 1px solid #ddd;
   padding: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
