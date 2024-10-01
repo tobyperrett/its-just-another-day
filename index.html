@@ -32,27 +32,27 @@
     <!-- Figure Section -->
     <section id="problem statement">
       <h2>Problem statement</h2>
-      <p>Given a set of similar video clips, the goal is to generate a caption for each, which is concise and focusses on what is unique to each clip. This should allow the caption to retrieve the video clip. Previous approaches have captioned clips independently, which means they are often assigned the same caption.</p>
+      <p>Given a set of similar video clips, the goal is to generate a caption for each, which is concise and focusses on what is unique to each clip. This should give a one-to-one relationship between clips and captions, were each caption to retrieve its corresponding video clip.</p>
       
       <!-- Part (a) -->
       <div class="figure-part-a">
         <img src="figure_a.png" alt="Part (a)" class="full-width-image">
-        <p><em>(a) Overview of the entire architecture.</em></p>
+        <p><em>(a) A long egocentric video. The yellow/green/pink clips are initially captioned as “Opens the fridge”.</em></p>
       </div>
       
       <!-- Parts (b), (c), and (d) -->
       <div class="figure-row">
         <div class="figure-part">
           <img src="figure_b.png" alt="Part (b)">
-          <p><em>(b) Close-up of the first component.</em></p>
+          <p><em>(b) Standard captioning can generate the same caption for multiple clips as they are captioned independently.</em></p>
         </div>
         <div class="figure-part">
           <img src="figure_c.png" alt="Part (c)">
-          <p><em>(c) Performance comparison.</em></p>
+          <p><em>(c) We consider clips with the same caption, to find a property that captions them uniquely.</em></p>
         </div>
         <div class="figure-part">
           <img src="figure_d.png" alt="Part (d)">
-          <p><em>(d) Example output segmentation.</em></p>
+          <p><em>(d) If we cannot find a unique property, we explore the following clips for an extended unique caption.</em></p>
         </div>
       </div>
 
@@ -64,9 +64,9 @@
       <h2>Method</h2>
       <p>Captioning by Discriminative Prompting (CDP) is based around predicting discriminative prompts for the set of similar clips. Our intuition is that it is easier to spot where a difference occurs, instead of fully captioning multiple clips with a captioner all at once.
 
-        This allows us to use one frozen single-clip pre-trained captioner, and only requires us to learn a lightweight and scalable prompt-prediction network, CDPNet, which is small enough to be conditioned on all the clips we want unique captions for.
+      This allows us to use one frozen single-clip pre-trained captioner, and only requires us to learn a lightweight and scalable prompt-prediction network, CDPNet, which is small enough to be conditioned on all the clips we want unique captions for.
         
-        We also acknowledge that all captioners have limitations. When CDPNet determines that the captioner cannot generate a unique caption for a given clip, we exploit the long-term nature of the video to advance temporally until it can.</p>
+      We also acknowledge that all captioners have limitations. When CDPNet determines that the captioner cannot generate a unique caption for a given clip, we exploit the long-term nature of the video to advance temporally until it can.</p>
     </section>
 
     <!-- Benchmark Section -->
