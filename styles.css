@@ -92,33 +92,35 @@ section {
   height: auto;
 }
 
-/* Parts (b), (c), and (d) - Same height, proportional widths, within page */
+/* Parts (b), (c), and (d) - Fit within page, same height, dynamic width */
 .figure-row {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Align items to the top */
   margin-top: 20px;
+  width: 100%;
 }
 
 .figure-part {
-  flex-grow: 1;
   margin-right: 10px;
-  overflow: hidden; /* Prevent images from overflowing the container */
+  flex-grow: 1; /* Allows flexible widths */
+  flex-basis: 0; /* Prevents fixed widths */
+  display: flex;
+  justify-content: center; /* Center the images */
+  align-items: center;
 }
 
 .figure-part:last-child {
   margin-right: 0;
 }
 
-/* Each image has the same height and fits within the container */
+/* Each image has the same height, but flexible width to fit */
 .figure-part img {
-  max-height: 250px; /* Fixed height for all images */
-  width: auto; /* Maintain aspect ratio */
-  height: 100%; /* Ensure height is fixed */
+  max-height: 250px; /* Fixed height */
+  width: auto; /* Dynamically adjust the width */
+  max-width: 100%; /* Prevent the image from overflowing */
   border: 1px solid #ddd;
   padding: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  display: block;
 }
 
 .figure-part em {
