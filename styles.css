@@ -98,36 +98,35 @@ section {
   justify-content: space-between;
   margin-top: 20px;
   width: 100%;
+  align-items: flex-start; /* Align all images at the top */
 }
 
 .figure-part {
+  flex-grow: 1;
   margin-right: 10px;
-  flex-grow: 1; /* Allows flexible widths */
-  flex-basis: 0; /* Prevents fixed widths */
-  display: flex;
-  justify-content: center; /* Center the images */
-  align-items: center;
 }
 
 .figure-part:last-child {
   margin-right: 0;
 }
 
-/* Each image has the same height, but flexible width to fit */
+/* Fixing the image sizing */
 .figure-part img {
-  max-height: 250px; /* Fixed height */
-  width: auto; /* Dynamically adjust the width */
-  max-width: 100%; /* Prevent the image from overflowing */
+  height: 250px; /* Fixed height */
+  width: auto; /* Adjust the width proportionally */
+  display: block;
+  margin: 0 auto;
   border: 1px solid #ddd;
   padding: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Center captions */
 .figure-part em {
   font-size: 0.9em;
   color: #666;
-  display: block;
   text-align: center;
+  display: block;
   margin-top: 5px;
 }
 
