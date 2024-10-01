@@ -37,7 +37,7 @@
     <section id="problem statement">
       <h2>Problem statement</h2>
 
-      <p>The following figure highlights a shortcoming of current captioning approaches, in a long egocentric video. The yellow/green/pink clips are initially captioned as “Opens the fridge”, as each clip is captioned independently:</p>
+      <p>The following figure highlights a shortcoming of current captioning approaches, in a long egocentric video. The yellow/green/pink clips are initially all captioned as “Opens the fridge”, as each clip is captioned independently:</p>
 
       <!-- Part (a) -->
       <div class="figure-part-a">
@@ -77,11 +77,11 @@
       <div class="figure-row">
         <div class="figure-part">
           <img src="figs/w1.png" alt="Part (b)">
-          <p><em>(a) First, CDPNet is used to predict simiarities, which are searched over to predict a prompt for each video clip.</em></p>
+          <p><em>(a) First, CDPNet is used to predict simiarities, which are searched over to predict a discriminative prompt for each video clip.</em></p>
         </div>
         <div class="figure-part">
           <img src="figs/w2.png" alt="Part (c)">
-          <p><em>(b) Each video clip is passed with its predicted prompt to a frozen single-clip captioner.</em></p>
+          <p><em>(b) Each video clip is then passed with its predicted prompt to a frozen single-clip captioner.</em></p>
         </div>
       </div>
 
@@ -125,9 +125,9 @@
     <!-- YouTube Video Embed Section -->
     <section id="video">
       <h2>Video Examples</h2>
-      <p>Here are three examples of uninque captioning on three timeloop movies: "Groundhog Day", "Edge of Tomorrow" and "The Map of Tiny Perfect Things", followed by three egocentric examples.</p>
+      <p>Here are three examples of uninque captioning on three timeloop movies: "Groundhog Day", "Edge of Tomorrow" and "The Map of Tiny Perfect Things", followed by three egocentric examples. In all cases, note how every caption can uniquely identify the video-clip it was generated from.</p>
       <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/37Q1uA63kbU" frameborder="0" allowfullscreen></iframe>
       </div>
       <!-- <p><em>Watch the video presentation to learn more about our approach and experimental setup.</em></p> -->
     </section>
