@@ -98,12 +98,6 @@ section {
   justify-content: space-between;
   align-items: flex-start; /* Align items to the top */
   margin-top: 20px;
-}
-
-/* Ensure all elements inside figure-row have the same font style */
-.figure-row,
-.figure-part,
-.figure-part em {
   font-family: 'Arial', 'Helvetica', sans-serif; /* Match font style */
   font-size: 0.9em; /* Match font size */
   color: #666; /* Match font color */
