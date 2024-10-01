@@ -55,6 +55,23 @@ h1 {
   text-decoration: underline;
 }
 
+.authors h4 {
+  font-size: 1em;
+  margin-top: 5px;
+  color: #333; /* or any color you prefer */
+}
+
+.authors h4 a {
+  color: #1f4e79; /* Dark blue for links */
+  text-decoration: none;
+}
+
+.authors h4 a:hover {
+  text-decoration: underline;
+}
+
+
+
 /* Section Headings */
 h2 {
   font-size: 1.8em;
