@@ -92,38 +92,43 @@ section {
   height: auto;
 }
 
-/* Parts (b), (c), (d) - Inline images with same height but varying widths */
+/* Parts (b), (c), and (d) - Fit within page, same height, dynamic width */
 .figure-row {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Align items to the top */
   margin-top: 20px;
+  width: 100%;
+  align-items: flex-start; /* Align all images at the top */
 }
 
 .figure-part {
-  flex-grow: 0;
+  flex: 1; /* Allow the part to grow */
   margin-right: 10px;
+  display: flex; /* Use flex to center the image */
+  flex-direction: column; /* Stack image and caption */
 }
 
 .figure-part:last-child {
-  margin-right: 0;
+  margin-right: 0; /* Remove right margin on the last child */
 }
 
-/* Each image in the row has the same height, but width adjusts dynamically */
+/* Fixing the image sizing */
 .figure-part img {
-  height: 250px; /* Fixed height for all images */
-  width: auto; /* The width adjusts dynamically based on aspect ratio */
+  max-height: 250px; /* Fixed height */
+  width: auto; /* Adjust the width proportionally */
+  display: block;
+  margin: 0 auto; /* Center the image */
   border: 1px solid #ddd;
   padding: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  display: block;
 }
 
+/* Center captions */
 .figure-part em {
   font-size: 0.9em;
   color: #666;
-  display: block;
   text-align: center;
+  display: block;
   margin-top: 5px;
 }
 
