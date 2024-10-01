@@ -64,7 +64,7 @@
       <h2>Method</h2>
       <p>Captioning by Discriminative Prompting (CDP) is based around predicting discriminative prompts for the set of similar clips. Our intuition is that it is easier to spot where a difference occurs, instead of fully captioning multiple clips with a captioner all at once.
 
-      This allows us to use one frozen single-clip pre-trained captioner, and only requires us to learn a lightweight and scalable prompt-prediction network, CDPNet, which is small enough to be conditioned on all the clips we want unique captions for.
+      This allows us to use one frozen single-clip pre-trained captioner, and only requires us to learn a lightweight and scalable network, CDPNet, which predicts the similarity between a video clip and a prompted caption in a shared embedding space. These similarities are then searched over to find the most unique caption. CDPNet is small enough to be conditioned on all the clips we want unique captions for.
         
       We also acknowledge that all captioners have limitations. When CDPNet determines that the captioner cannot generate a unique caption for a given clip, we exploit the long-term nature of the video to advance temporally until it can.</p>
     </section>
