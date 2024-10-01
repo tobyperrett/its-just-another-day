@@ -71,7 +71,7 @@
     <section id="method">
       <h2>Method</h2>
       <p>Captioning by Discriminative Prompting (CDP) is based around predicting discriminative prompts for the set of similar clips. Our intuition is that it is easier to spot where a difference occurs, instead of fully captioning multiple clips with a captioner all at once.</p>
-
+      <br />
       <p>This allows us to use one frozen single-clip pre-trained captioner, and only requires us to learn a lightweight and scalable network, CDPNet, which predicts the similarity between a video clip and a prompted caption in a shared embedding space. These similarities are then searched over to find the most unique caption. CDPNet is small enough to be conditioned on all the clips we want unique captions for.</p>
 
       <div class="figure-row">
@@ -91,7 +91,7 @@
     <!-- Benchmark Section -->
     <section id="benchmarks">
       <h2>Benchmarks</h2>
-      <p>We curate sets of similar clips from two domains: Egocentric videos and Timeloop movies. Methods are evaluated by average video-to-text and text-to-video recall @ 1. We apply CDP to the SOTA captioner for each domain - LaViLa for egocentric and VideoLlama for timeloop movies, with significant improvements on each.</p>
+      <p>We curate sets of similar clips from two domains: egocentric videos from Ego4D and timeloop movies. Methods are evaluated by average video-to-text and text-to-video recall@1. We apply CDP to the SOTA captioner for each domain - LaViLa for egocentric and VideoLlama for movies, with significant improvements on each.</p>
 
       <!-- <table>
         <thead>
