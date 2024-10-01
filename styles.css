@@ -36,7 +36,7 @@ h1 {
   font-size: 2.4em;
   margin-bottom: 10px;
   font-weight: bold;
-  color: #1f4e79; /* Same color for title and section headings */
+  color: #1f4e79; /* Dark blue title and section headings */
 }
 
 .authors h3 {
@@ -55,17 +55,12 @@ h1 {
   text-decoration: underline;
 }
 
-.conference-info p {
-  font-size: 0.9em;
-  margin-bottom: 5px;
-}
-
 /* Section Headings */
 h2 {
   font-size: 1.8em;
   margin-bottom: 10px;
   font-weight: bold;
-  color: #1f4e79; /* Dark blue for all headings */
+  color: #1f4e79; /* Same color as the title */
 }
 
 section {
@@ -164,4 +159,6 @@ table caption, p em {
   padding: 15px;
   border-left: 3px solid #1f4e79;
   font-size: 0.9em;
-  color: #333
+  color: #333;
+  overflow-x: auto;
+}
