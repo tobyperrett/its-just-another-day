@@ -32,27 +32,31 @@
     <!-- Figure Section -->
     <section id="problem statement">
       <h2>Problem statement</h2>
-      <p>Given a set of similar video clips, the goal is to generate a caption for each, which is concise and focusses on what is unique to each clip. This should give a one-to-one relationship between clips and captions, were each caption to retrieve its corresponding video clip. The following figure highlights the problem.</p>
+      <p>Given a set of similar video clips, the goal is to generate a caption for each, which is concise and focusses on what is unique to each clip. This should give a one-to-one relationship between clips and captions, were each caption to retrieve its corresponding video clip. 
+        
+      <p>The following figure highlights the shortcomings of current approaches, which caption clips independently, in a long egocentric video:</p>
       
       <!-- Part (a) -->
       <div class="figure-part-a">
         <img src="figs/egolong.png" alt="Part (a)" class="full-width-image">
-        <p><em>(a) A long egocentric video. The yellow/green/pink clips are initially captioned as “Opens the fridge” as existing methods caption clips independently.</em></p>
+        <!-- <p><em>(a)A long egocentric video. The yellow/green/pink clips are initially captioned as “Opens the fridge” as existing methods caption clips independently.</em></p> -->
       </div>
       
+      Instead, take the following approach:
+
       <!-- Parts (b), (c), and (d) -->
       <div class="figure-row">
         <div class="figure-part">
           <img src="figs/t1.png" alt="Part (b)">
-          <p><em>(b) Standard captioning can generate the same caption for multiple clips.</em></p>
+          <p><em>(a) Standard captioning can generate the same caption for multiple clips.</em></p>
         </div>
         <div class="figure-part">
           <img src="figs/t2.png" alt="Part (c)">
-          <p><em>(c) We consider clips with the same caption, to find a property that captions them uniquely. In this case, what the person is "holding".</em></p>
+          <p><em>(b) We consider clips with the same caption, to find a property that captions them uniquely. In this case, what the person is "holding".</em></p>
         </div>
         <div class="figure-part">
           <img src="figs/t3.png" alt="Part (d)">
-          <p><em>(d) If we cannot find a unique property, we explore the following clips for an extended unique caption.</em></p>
+          <p><em>(c) If we cannot find a unique property, we explore the following clips for an extended unique caption.</em></p>
         </div>
       </div>
 
