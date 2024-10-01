@@ -3,47 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CVPR 2024 Paper">
-  <title>CVPR Paper 2024</title>
+  <meta name="description" content="It's Just Another Day">
+  <title>It's Just Another Day</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
     <!-- Paper Title Section -->
     <header>
-      <h1>Understanding Deep Learning Approaches for Image Segmentation in Computer Vision</h1>
+      <h1>It's Just Another Day: Unique Video Captioning by Discriminitave Prompting</h1>
       <div class="authors">
         <h3>
-          <a href="https://johndoe.com" target="_blank">John Doe</a>, 
-          <a href="https://janesmith.com" target="_blank">Jane Smith</a>, 
-          <a href="https://michaeljohnson.com" target="_blank">Michael Johnson</a>
+          <a href="https://tobyperrett.github.io" target="_blank">Toby Perrett</a>, 
+          <a href="https://tengdahan.github.io" target="_blank">Tengda Han</a>, 
+          <a href="https://dimadamen.github.io" target="_blank">Dima Damen</a>, 
+          <a href="https://www.robots.ox.ac.uk/~az/" target="_blank">Andrew Zisserman</a>, 
         </h3>
       </div>
     </header>
 
     <!-- Abstract Section -->
-    <section id="abstract">
-      <h2>Abstract</h2>
-      <p>This paper presents a novel approach to solving image segmentation in computer vision, leveraging deep learning techniques to surpass existing methods in both accuracy and efficiency. Our proposed architecture improves segmentation results across multiple datasets.</p>
+    <section id="introduction">
+      <h2>Introduction</h2>
+      <p>This paper investigates unique video captioning. We introduce a method, Captioning by Discriminitave Prompting (CDP) and challenging unique captioning benchmarks on Egocentric video and Timeloop movies.
+      </p>
     </section>
 
     <!-- Figure Section -->
-    <section id="figure">
-      <h2>Figure</h2>
+    <section id="problem statement">
+      <h2>Problem statement</h2>
+      <p>Given a set of similar video clips, the goal is to generate a caption for each, which is concise and focusses on what is unique to each clip. This should allow the caption to retrieve the video clip. Previous approaches have captioned clips independently, which means they are often assigned the same caption.</p>
       <img src="figure.png" alt="Main figure of the publication" class="main-figure">
       <p><em>Figure 1: Overview of the model architecture and results.</em></p>
     </section>
 
     <!-- Introduction Section -->
-    <section id="introduction">
-      <h2>Introduction</h2>
-      <p>In recent years, image segmentation has seen significant advancements through the application of deep learning models. Traditional techniques, such as graph-based segmentation and clustering, have been surpassed by convolutional neural networks (CNNs) due to their ability to learn spatial hierarchies in images. In this work, we propose an enhanced deep learning model for image segmentation that achieves state-of-the-art performance.</p>
+    <section id="method">
+      <h2>Method</h2>
+      <p>ICaptioning by Discriminative Prompting (CDP) is based around predicting discriminative prompts for the set of similar clips. Our intuition is that it is easier to spot where a difference occurs, instead of fully captioning multiple clips with a captioner all at once.
+
+        This allows us to use one frozen single-clip pre-trained captioner, and only requires us to learn a lightweight and scalable prompt-prediction network, CDPNet, which is small enough to be conditioned on all the clips we want unique captions for.
+        
+        We also acknowledge that all captioners have limitations. When CDPNet determines that the captioner cannot generate a unique caption for a given clip, we exploit the long-term nature of the video to advance temporally until it can.</p>
     </section>
 
     <!-- Benchmark Section -->
-    <section id="benchmark">
-      <h2>Benchmark Results</h2>
-      <table>
+    <section id="benchmarks">
+      <h2>Benchmarks</h2>
+      <p>We curate sets of similar clips from two domains: Egocentric videos and Timeloop movies. Methods are evaluated by Average video-to-text and text-to-video recall @ 1. We apply CDP to the SOTA captioner for each domain - LaViLa for egocentric and VideoLlama for timeloop movies, with significant improvements on each.</p>
+
+      <!-- <table>
         <thead>
           <tr>
             <th>Method</th>
@@ -69,22 +78,23 @@
           </tr>
         </tbody>
       </table>
-      <p><em>Table 1: Benchmark results comparing our method with baseline approaches on the XYZ dataset.</em></p>
+      <p><em>Table 1: Benchmark results comparing our method with baseline approaches on the XYZ dataset.</em></p> -->
     </section>
 
     <!-- YouTube Video Embed Section -->
     <section id="video">
-      <h2>Video Presentation</h2>
+      <h2>Video Examples</h2>
+      <p>Here are three examples of uninque captioning on three timeloop movies: "Groundhog Day", "Edge of Tomorrow" and "The Map of Tiny Perfect Things", followed by three egocentric examples.</p>
       <div class="video-container">
         <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
       </div>
-      <p><em>Watch the video presentation to learn more about our approach and experimental setup.</em></p>
+      <!-- <p><em>Watch the video presentation to learn more about our approach and experimental setup.</em></p> -->
     </section>
 
     <!-- GitHub Link Section -->
     <section id="github">
       <h2>Code Repository</h2>
-      <p>The code for this paper is available on GitHub. You can find the full implementation and datasets used in this study:</p>
+      <p>Code/benchmarks/models are here:</p>
       <p><a href="https://github.com/your-repo-link" target="_blank">GitHub Repository</a></p>
     </section>
 
@@ -92,13 +102,12 @@
     <section id="bibtex">
       <h2>BibTeX Entry</h2>
       <pre>
-@inproceedings{doe2024image,
-  title={Understanding Deep Learning Approaches for Image Segmentation in Computer Vision},
-  author={Doe, John and Smith, Jane and Johnson, Michael},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year={2024},
-  organization={IEEE}
-}
+        @inproceedings{perrett2024unique,
+          title={It's Just Another Day: Unique Video Captioning by Discriminitave Prompting},
+          author={Perrett, Toby and Han, Tengda and Damen, Dima and Zisserman, Andrew},
+          booktitle={Asian Conference on Computer Vision},
+          year={2024},
+        }
       </pre>
     </section>
   </div>
