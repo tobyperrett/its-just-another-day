@@ -92,7 +92,7 @@ section {
   height: auto;
 }
 
-/* Parts (b), (c), and (d) - Same height, proportional widths, within page */
+/* Parts (b), (c), (d) - Inline images with same height but varying widths */
 .figure-row {
   display: flex;
   justify-content: space-between;
@@ -101,20 +101,18 @@ section {
 }
 
 .figure-part {
-  flex-grow: 1;
+  flex-grow: 0;
   margin-right: 10px;
-  overflow: hidden; /* Prevent images from overflowing the container */
 }
 
 .figure-part:last-child {
   margin-right: 0;
 }
 
-/* Each image has the same height and fits within the container */
+/* Each image in the row has the same height, but width adjusts dynamically */
 .figure-part img {
-  max-height: 250px; /* Fixed height for all images */
-  width: auto; /* Maintain aspect ratio */
-  height: 100%; /* Ensure height is fixed */
+  height: 250px; /* Fixed height for all images */
+  width: auto; /* The width adjusts dynamically based on aspect ratio */
   border: 1px solid #ddd;
   padding: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
