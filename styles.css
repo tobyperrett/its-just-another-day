@@ -92,40 +92,43 @@ section {
   height: auto;
 }
 
-/* Parts (b), (c), and (d) - Same height, proportional widths, within page */
+/* Parts (b), (c), and (d) - Fit within page, same height, dynamic width */
 .figure-row {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Align items to the top */
   margin-top: 20px;
+  width: 100%;
+  align-items: flex-start; /* Align all images at the top */
 }
 
 .figure-part {
-  flex-grow: 1;
+  flex: 1; /* Allow the part to grow */
   margin-right: 10px;
-  overflow: hidden; /* Prevent images from overflowing the container */
+  display: flex; /* Use flex to center the image */
+  flex-direction: column; /* Stack image and caption */
 }
 
 .figure-part:last-child {
-  margin-right: 0;
+  margin-right: 0; /* Remove right margin on the last child */
 }
 
-/* Each image has the same height and fits within the container */
+/* Fixing the image sizing */
 .figure-part img {
-  max-height: 250px; /* Fixed height for all images */
-  width: auto; /* Maintain aspect ratio */
-  height: 100%; /* Ensure height is fixed */
+  max-height: 250px; /* Fixed height */
+  width: auto; /* Adjust the width proportionally */
+  display: block;
+  margin: 0 auto; /* Center the image */
   border: 1px solid #ddd;
   padding: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  display: block;
 }
 
+/* Center captions */
 .figure-part em {
   font-size: 0.9em;
   color: #666;
-  display: block;
   text-align: center;
+  display: block;
   margin-top: 5px;
 }
 
