@@ -111,7 +111,7 @@ section {
 
 /* Each image in the row has the same height, but width adjusts dynamically */
 .figure-part img {
-  height: 250px; /* Fixed height for all images */
+  height: 150px; /* Fixed height for all images */
   width: auto; /* The width adjusts dynamically based on aspect ratio */
   border: 1px solid #ddd;
   padding: 5px;
