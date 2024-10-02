@@ -39,6 +39,15 @@ h1 {
   color: #1f4e79; /* Dark blue title and section headings */
 }
 
+.conference-tag {
+  font-size: 1.2em;    /* Adjust the size slightly smaller than the title */
+  color: #555;      /* Red color for emphasis (adjust if needed) */
+  font-weight: bold;
+  text-align: center;  /* Center the text */
+  margin-top: 5px;     /* Small space between title and tag */
+  margin-bottom: 15px; /* Space before the author names */
+}
+
 .authors h3 {
   font-size: 1.2em;
   font-weight: normal;
