@@ -102,35 +102,44 @@
     <!-- Benchmark Section -->
     <section id="benchmarks">
       <h2>Benchmarks</h2>
-      <p>We curate sets of similar clips from two domains: egocentric videos from Ego4D and timeloop movies. Methods are evaluated by average video-to-text and text-to-video recall@1. We apply CDP to the SOTA captioner for each domain - LaViLa for egocentric and VideoLlama for movies, with significant improvements on each.</p>
+      <p>We curate sets of similar clips from two domains: egocentric videos from Ego4D and timeloop movies. Methods are evaluated by average video-to-text and text-to-video R@1. We apply CDP to the SOTA captioner for each domain with significant improvements on each.</p>
+      <br />
+      <p>Here are results for the LaViLa VCLM captioner on egocentric sets of 10. Additional time (T) indicates the model is allowed to advance through the video.</p>
 
-      <!-- <table>
+
+
+
+
+
+
+      <table>
         <thead>
           <tr>
             <th>Method</th>
-            <th>Accuracy (%)</th>
-            <th>Speed (ms/frame)</th>
+            <th>T=0</th>
+            <th>T=5</th>
+            <th>T=10</th>
+            <th>T=30</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Our Method</td>
-            <td>95.6</td>
+            <td>LaViLa VCLM</td>
+            <td>37</td>
+            <td>38</td>
+            <td>41</td>
+            <td>43</td>
+          </tr>
+          <tr>
+            <td>LaViLa VCLM + CDP</td>
             <td>45</td>
-          </tr>
-          <tr>
-            <td>Baseline Method A</td>
-            <td>92.3</td>
-            <td>50</td>
-          </tr>
-          <tr>
-            <td>Baseline Method B</td>
-            <td>91.0</td>
-            <td>48</td>
+            <td>57</td>
+            <td>65</td>
+            <td>76</td>
           </tr>
         </tbody>
       </table>
-      <p><em>Table 1: Benchmark results comparing our method with baseline approaches on the XYZ dataset.</em></p> -->
+      <!-- <p><em>Table 1: Benchmark results comparing our method with baseline approaches on the XYZ dataset.</em></p> -->
     </section>
 
     <!-- YouTube Video Embed Section -->
