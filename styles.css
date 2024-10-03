@@ -116,6 +116,9 @@ section {
 .figure-part-a .full-width-image {
   max-width: 100%;
   height: auto;
+  justify-content: center; /* Center image within its part */
+  flex-direction: column; /* Stack image and caption */
+  align-items: center; /* Center the content horizontally */
 }
 
 /* Parts (b), (c), (d) - Inline images with same height but varying widths */
@@ -144,6 +147,7 @@ section {
   width: auto; /* The width adjusts dynamically based on aspect ratio */
   /* border: 1px solid #ddd; */
   padding: 5px;
+  margin: 0 auto;
   /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
   display: block;
 }
@@ -152,7 +156,7 @@ section {
   font-size: 0.9em;
   color: #666;
   display: block;
-  text-align: center;
+  text-align: left;
   margin-top: 5px;
 }
 
