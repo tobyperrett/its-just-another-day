@@ -116,9 +116,6 @@ section {
 .figure-part-a .full-width-image {
   max-width: 100%;
   height: auto;
-  justify-content: center; /* Center image within its part */
-  flex-direction: column; /* Stack image and caption */
-  align-items: center; /* Center the content horizontally */
 }
 
 /* Parts (b), (c), (d) - Inline images with same height but varying widths */
@@ -135,7 +132,9 @@ section {
 .figure-part {
   flex-grow: 0;
   margin-right: 10px;
-}
+  justify-content: center; /* Center image within its part */
+  flex-direction: column; /* Stack image and caption */
+  align-items: center; /* Center the content horizontally */}
 
 .figure-part:last-child {
   margin-right: 0;
